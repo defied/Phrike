@@ -69,7 +69,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/defied/${{ env.IMAGE_NAME }}:latest 
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest 
           #${{ env.TAG }}
           # tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

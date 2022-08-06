@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/defied/phrike
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "main"
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -41,18 +41,18 @@ service:
   port: 80
 
 ingress:
-  enabled: false
-  className: ""
-  annotations: 
+  enabled: true
+  className: "public"
+  annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: letsencrypt-production"
-    nginx.ingress.kubernetes.io/ssl-redirect: “true”
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
   hosts:
     - host: phrike.deadplanet.net
       paths:
         - path: /
-          pathType: ImplementationSpecific
-  tls: 
+          pathType: Prefix
+  tls:
    - secretName: phrike.deadplanet.net-tls
      hosts:
        - phrike.deadplanet.net
