@@ -4,5 +4,7 @@ RUN apt update && apt install -y -q \
     && \
     rm -rf /var/lib/apt/lists/*
 
+COPY configs/entrypoint.sh .
 COPY build/WebGL .
 COPY configs/nginx.conf /etc/nginx/
+ENTRYPOINT [ "/entrypoint.sh" ]
