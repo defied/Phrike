@@ -1,4 +1,5 @@
 FROM ubuntu:jammy
+COPY configs/entrypoint.sh /
 RUN apt update && apt install -y -q \
     nginx \
     sudo \
@@ -10,7 +11,7 @@ RUN adduser --disabled-password --gecos '' docker && \
     usermod -aG sudo docker
 
 # Set entry script, make executable by docker user:
-COPY configs/entrypoint.sh /
+
 RUN chown docker:docker /entrypoint.sh && \
     chmod 755 /entrypoint.sh && \
     which sh
