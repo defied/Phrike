@@ -14,7 +14,7 @@ env:
 jobs:
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
-    runs-on: [ self-hosted, ubuntu-latest ]
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
