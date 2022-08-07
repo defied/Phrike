@@ -1,4 +1,5 @@
 FROM ubuntu:jammy
+LABEL org.opencontainers.image.source https://github.com/defied/phrike
 COPY configs/entrypoint.sh /
 RUN apt update && apt install -y -q \
     nginx \
