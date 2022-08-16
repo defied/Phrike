@@ -22,4 +22,4 @@ COPY configs/entrypoint.sh .
 COPY build/WebGL /
 COPY configs/nginx.conf /etc/nginx/
 # Set environment to run as user.
-USER docker
+# USER docker
