@@ -1,11 +1,11 @@
 FROM ubuntu:jammy
 LABEL org.opencontainers.image.source https://github.com/defied/phrike
 COPY configs/entrypoint.sh /
-RUN apt update && apt install -y -q \
-    nginx \
-    sudo \
-    && \
-    rm -rf /var/lib/apt/lists/*
+# RUN apt update && apt install -y -q \
+#     nginx \
+#     sudo \
+#     && \
+#     rm -rf /var/lib/apt/lists/*
 
 # Create a docker user with sudoer privileges:
 RUN adduser --disabled-password --gecos '' docker && \
