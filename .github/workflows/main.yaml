@@ -77,10 +77,7 @@ jobs:
           config-inline: |
             [registry."ghcr.io"]
               # mirrors = ["mirror.gcr.io"]
-      # - name: Set up builder
-      #   uses: docker/setup-buildx-action@v2
-      #   id: buildx
-      #   with:
+          id: buildx
           endpoint: builders
           install: true
 
