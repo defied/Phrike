@@ -80,12 +80,12 @@ jobs:
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
           labels: ${{ steps.meta.outputs.labels }}
           
-      - name: Delete older images
-        uses: actions/delete-package-versions@v3
-        with: 
-          package-name: ${{ env.IMAGE_NAME }}
-          min-versions-to-keep: 1
-          delete-only-pre-release-versions: "true"
+      # - name: Delete older images
+      #   uses: actions/delete-package-versions@v3
+      #   with: 
+      #     package-name: ${{ env.IMAGE_NAME }}
+      #     min-versions-to-keep: 1
+      #     delete-only-pre-release-versions: "true"
 
       # - name: Update application in Argo-CD
       #   run: |
