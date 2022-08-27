@@ -1,10 +1,13 @@
 FROM nginx:1.23.1
 
+WORKDIR /etc/nginx
+COPY configs/nginx.conf .
+
 WORKDIR /etc/nginx/conf.d
-COPY configs/webgl.conf default.conf
+COPY configs/webgl.conf ./default.conf
 
 WORKDIR /webgl
-COPY build/WebGL/ .
+ADD build/WebGL .
 
 
 
