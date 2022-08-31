@@ -138,7 +138,8 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -792,7 +793,7 @@ PlayerSettings:
     QNX: ENVIRO_LW
     Stadia: ENVIRO_LW
     Standalone: ENVIRO_LW
-    WebGL: ENVIRO_LW;STARTER_ASSETS_PACKAGES_CHECKED
+    WebGL: STARTER_ASSETS_PACKAGES_CHECKED
     Windows Store Apps: ENVIRO_LW
     XboxOne: ENVIRO_LW
     tvOS: ENVIRO_LW
