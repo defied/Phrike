@@ -58,7 +58,7 @@ jobs:
           echo "SERVICE_NAME=${REPO_PATH##*/}" >> $GITHUB_ENV
           echo "DOCKER_REPOSITORY=${REPO_PATH,,}/${CONTAINER_NAME,,}" >> $GITHUB_ENV
           echo "TAG=sha-$(git rev-parse --short=8 ${{ github.sha }})" >> $GITHUB_ENV
-      - if: ${{ targetPlatform == 'WebGL' }}
+      # - if: ${{ targetPlatform == 'WebGL' }}
       - name: Log in to the Container registry
         uses: docker/login-action@v2
         with:
