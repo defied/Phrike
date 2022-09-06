@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/phrike.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
-    path: Assets/Geopipe/Pack01Demo/Pack01Demo01.unity
-    guid: 3ed2f0201536ec348868b1052de8a5c7
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
