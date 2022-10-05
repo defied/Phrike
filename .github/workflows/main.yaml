@@ -73,14 +73,12 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Set up context for buildx
-        if: env.SHOULD == 'true'
         id: buildx-context
         run: |
           docker context create builders
 
       - name: Set up builder
         uses: docker/setup-buildx-action@v2
-        if: env.SHOULD == 'true'
         id: buildx
         with:
           endpoint: builders
@@ -91,7 +89,6 @@ jobs:
         with:
           context: .
           push: true
-          target: build
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
           labels: ${{ steps.meta.outputs.labels }}
           
