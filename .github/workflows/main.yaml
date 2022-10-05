@@ -25,7 +25,8 @@ jobs:
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-        with: endpoint=tls-environment
+        with:
+          buildkitd-flags: --debug
 
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
