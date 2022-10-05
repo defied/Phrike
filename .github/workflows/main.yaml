@@ -53,6 +53,7 @@ jobs:
       #   with:
       #     targetPlatform: ${{ matrix.targetPlatform }}
 
+
       - name: Setup ENV
         run: |
           echo "SERVICE_NAME=${REPO_PATH##*/}" >> $GITHUB_ENV
