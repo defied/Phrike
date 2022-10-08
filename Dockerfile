@@ -6,5 +6,5 @@ COPY configs/nginx.conf .
 WORKDIR /etc/nginx/conf.d
 COPY configs/webgl.conf ./default.conf
 
-# WORKDIR /webgl
-# ADD build/WebGL/ ./
+WORKDIR /webgl
+ADD build/WebGL/ ./
