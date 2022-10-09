@@ -31,12 +31,12 @@ jobs:
           fetch-depth: 1
           lfs: false
       
-      - uses: game-ci/unity-test-runner@v2
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-        with:
-          projectPath: ${{ env.PROJECT_PATH }}
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
+      # - uses: game-ci/unity-test-runner@v2
+      #   env:
+      #     UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      #   with:
+      #     projectPath: ${{ env.PROJECT_PATH }}
+      #     githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/cache@v2
         with:
