@@ -28,8 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 1
-          lfs: false
+          fetch-depth: 0
+          lfs: true
       
       # - uses: game-ci/unity-test-runner@v2
       #   env:
