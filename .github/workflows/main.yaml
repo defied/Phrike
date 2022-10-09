@@ -51,6 +51,8 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           PROJECT_PATH: .
         with:
+          remoteBuildMemory: 2
+          remoteBuildCpu: 0.5
           targetPlatform: ${{ matrix.targetPlatform }}
 
       - name: Setup ENV
