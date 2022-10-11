@@ -51,8 +51,6 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           PROJECT_PATH: .
         with:
-          cloudRunnerMemory: 2
-          cloudRunnerCpu: 0.5
           targetPlatform: ${{ matrix.targetPlatform }}
 
       - name: Setup ENV
