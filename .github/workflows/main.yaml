@@ -13,7 +13,7 @@ env:
 jobs:
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
-    runs-on: dind-size-xl
+    runs-on: size-xl
     # strategy:
     #   fail-fast: false
     #   matrix:
