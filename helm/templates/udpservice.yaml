@@ -11,8 +11,8 @@ spec:
   type: {{ .Values.udpService.type }}
   ports:
     - name: proxied-udp-external
-      port: {{ Values.tcpService.externalPort }}
-      targetPort: {{ Values.tcpService.externalPort }}
+      port: {{ .Values.udpService.externalPort }}
+      targetPort: {{ .Values.udpService.externalPort }}
       protocol: UDP
   selector:
     app.kubernetes.io/name: ingress-nginx
