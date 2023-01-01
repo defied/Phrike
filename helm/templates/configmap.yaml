@@ -9,6 +9,7 @@ data:
 {{- end }}
 ---
 {{- if .Values.tcpService.enabled }}
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: udp-services
