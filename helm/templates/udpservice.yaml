@@ -2,11 +2,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ingress-nginx
-  namespace: ingress-nginx
+  name: ingress-nginx-udp
+  namespace: ingress
   labels:
     app.kubernetes.io/name: ingress-nginx-udp
-    app.kubernetes.io/part-of: ingress-nginx
+    app.kubernetes.io/part-of: ingress
 spec:
   type: {{ .Values.udpService.type }}
   ports:
@@ -15,6 +15,6 @@ spec:
       targetPort: {{ .Values.udpService.externalPort }}
       protocol: UDP
   selector:
-    app.kubernetes.io/name: ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
+    app.kubernetes.io/name: ingress-nginx-udp
+    app.kubernetes.io/part-of: ingress
 {{- end }}
