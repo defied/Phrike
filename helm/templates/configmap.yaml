@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: tcp-services
-  namespace: ingress-nginx
+  namespace: ingress
 data:
   {{ .Values.tcpService.externalPort }}: "{{ .Release.Namespace }}/{{ .Release.Name }}:{{ .Values.tcpService.port }}"
 {{- end }}
@@ -12,7 +12,7 @@ data:
 kind: ConfigMap
 metadata:
   name: udp-services
-  namespace: ingress-nginx
+  namespace: ingress
 data:
   {{ .Values.udpService.externalPort }}: "{{ .Release.Namespace }}/{{ .Release.Name }}:{{ .Values.udpService.port }}"
 {{- end }}
