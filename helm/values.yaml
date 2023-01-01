@@ -36,6 +36,18 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
+tcpService:
+  enabled: true
+  type: ClusterIP
+  port: 7777  
+  externalPort: 7777
+
+udpService:
+  enabled: true
+  type: ClusterIP
+  port: 7770
+  externalPort: 7770
+
 service:
   type: ClusterIP
   port: 80

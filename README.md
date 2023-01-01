@@ -38,3 +38,7 @@ docker run --rm -dit --name phrike-dev -p 8080:80 phrike:latest
 ```
 docker exec -it phrike-dev /bin/bash
 ```
+
+# Kubernetes
+### Configure nginx to support tcp/udp (non-http(s)) data:
+https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services/

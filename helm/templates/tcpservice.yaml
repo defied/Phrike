@@ -1,0 +1,20 @@
+{{- if .Values.tcpService.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-nginx
+  namespace: ingress-nginx
+  labels:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+spec:
+  type: {{ .Values.tcpService.type }}
+  ports:
+    - name: proxied-tcp-9000
+      port: 9000
+      targetPort: 9000
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+{{- end }}
