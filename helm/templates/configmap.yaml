@@ -5,7 +5,7 @@ metadata:
   name: tcp-services
   namespace: ingress-nginx
 data:
-  {{ .Values.tcpService.externalPort }}: "{{ .Release.Namespace }}/{{ .Release.Name }}:{{ Values.tcpService.port }}"
+  {{ .Values.tcpService.externalPort }}: "{{ .Release.Namespace }}/{{ .Release.Name }}:{{ .Values.tcpService.port }}"
 {{- end }}
 ---
 {{- if .Values.tcpService.enabled }}
@@ -14,5 +14,5 @@ metadata:
   name: udp-services
   namespace: ingress-nginx
 data:
-  {{ .Values.udpService.externalPort }}: "{{ .Release.Namespace }}/{{ .Release.Name }}:{{ Values.udpService.port }}"
+  {{ .Values.udpService.externalPort }}: "{{ .Release.Namespace }}/{{ .Release.Name }}:{{ .Values.udpService.port }}"
 {{- end }}
