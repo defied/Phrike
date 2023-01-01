@@ -445,7 +445,7 @@ MonoBehaviour:
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
     Address: 127.0.0.1
-    Port: 6666
+    Port: 80
     ServerListenAddress: 
   DebugSimulator:
     PacketDelayMS: 0

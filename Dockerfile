@@ -1,10 +1,7 @@
-FROM nginx:1.23.1
+FROM ubuntu:jammy
 
-WORKDIR /etc/nginx
-COPY configs/nginx.conf .
+WORKDIR /
+ADD configs/entrypoint.sh /
 
-WORKDIR /etc/nginx/conf.d
-COPY configs/webgl.conf ./default.conf
-
-WORKDIR /webgl
-ADD build/WebGL/ ./
+ADD build/StandaloneLinux64/ /
+ENTRYPOINT [ "./phrike-server.x86_64" ]
