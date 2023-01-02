@@ -45,8 +45,8 @@ tcpService:
 udpService:
   enabled: true
   type: ClusterIP
-  port: 7770
-  externalPort: 7770
+  port: 7777
+  externalPort: 7777
 
 service:
   type: ClusterIP
