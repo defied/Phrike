@@ -51,10 +51,11 @@ spec:
               service:
                 name: {{ $fullName }}
                 port:
-                  number: {{ $svcPort }}
+                  number: {{ .Values.tcpService.externalPort }}
               {{- else }}
               serviceName: {{ $fullName }}
-              servicePort: {{ $svcPort }}
+              servicePort: {{ .Values.tcpService.externalPort }}
+            #   servicePort: {{ $svcPort }}
               {{- end }}
           {{- end }}
     {{- end }}
