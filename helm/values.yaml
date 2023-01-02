@@ -50,7 +50,7 @@ udpService:
 
 service:
   type: ClusterIP
-  port: 7777
+  port: 80
 
 ingress:
   enabled: true
