@@ -444,9 +444,9 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: phrike.deadplanet.net
+    Address: 127.0.0.1
     Port: 7777
-    ServerListenAddress: localhost
+    ServerListenAddress: 0.0.0.0
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0
