@@ -1,5 +1,4 @@
 FROM ubuntu:jammy
-
 WORKDIR /
 ADD configs/entrypoint.sh /
 EXPOSE 7777/udp
