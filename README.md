@@ -32,7 +32,7 @@ docker run --rm -it \
 docker run --rm -dit --name phrike-dev --network host phrike:latest
 ```
 ```
-docker run --rm -dit --name phrike-dev -p 8080:80 phrike:latest
+docker run --rm -dit --name phrike-dev -p 7777:7777/udp phrike:latest
 ```
 ### Exec into shell
 ```

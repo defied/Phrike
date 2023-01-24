@@ -1,0 +1,10 @@
+/.git
+/.github
+/Assets
+/helm
+/Packages
+/ProjectSettings
+/Temp
+/test
+/UserSettings
+*/*DoNotShip*
