@@ -9,15 +9,15 @@ spec:
   ports:
     - name: http
       port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 7777
       protocol: TCP
-    - name: proxied-tcp-external
-      port: {{ .Values.tcpService.externalPort }}
-      targetPort: {{ .Values.tcpService.externalPort }}
-      protocol: TCP
-    - name: proxied-udp-external
-      port: {{ .Values.udpService.externalPort }}
-      targetPort: {{ .Values.udpService.externalPort }}
-      protocol: UDP
+    # - name: proxied-tcp-external
+    #   port: {{ .Values.tcpService.externalPort }}
+    #   targetPort: {{ .Values.tcpService.externalPort }}
+    #   protocol: TCP
+    # - name: proxied-udp-external
+    #   port: {{ .Values.udpService.externalPort }}
+    #   targetPort: {{ .Values.udpService.externalPort }}
+    #   protocol: UDP
   selector:
     {{- include "phrike.selectorLabels" . | nindent 4 }}
