@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "e9f53f86a047b585556e615c2093c7bfe3dad136"
     },
+    "com.googleforgames.agones": {
+      "version": "https://github.com/googleforgames/agones.git?path=/sdks/unity",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d1356023aee15e90a478bf3deaedacb2065972d6"
+    },
     "com.unity.burst": {
       "version": "1.7.3",
       "depth": 1,

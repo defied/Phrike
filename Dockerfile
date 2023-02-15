@@ -5,4 +5,4 @@ EXPOSE 7777
 ADD build/StandaloneLinux64/ /
 RUN ls -al
 RUN chmod u+x StandaloneLinux64
-ENTRYPOINT [ "./StandaloneLinux64", "-batchmode" ]
+ENTRYPOINT [ "./StandaloneLinux64", "-batchmode". "-mode server", "-memorysetup-temp-allocator-size-gfx=0" ]
