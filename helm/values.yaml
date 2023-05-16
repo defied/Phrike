@@ -36,18 +36,6 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-# tcpService:
-#   enabled: false
-#   type: LoadBalancer
-#   port: 7777  
-#   externalPort: 7777
-
-# udpService:
-#   enabled: false
-#   type: LoadBalancer
-#   port: 7777
-#   externalPort: 7777
-
 service:
   type: ClusterIP
   port: 7777
